@@ -13,19 +13,20 @@ import cookieParser from 'cookie-parser';
 
 const PORT = Number(env('PORT', '3000'));
 
-export const startServer = () => {
-  const app = express();
+// export const startServer = () => {
+//   const app = express();
 
-  app.use(express.json());
-  app.use(cors());
-  app.use(cookieParser());
-};
+//   app.use(express.json());
+//   app.use(cors());
+//   app.use(cookieParser());
+// };
 
 export const setupServer = () => {
   const app = express();
 
   app.use(express.json());
   app.use(cors());
+  app.use(cookieParser());
 
   app.use(
     pino({
