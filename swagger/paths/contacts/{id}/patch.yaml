@@ -15,7 +15,7 @@ parameters:
 requestBody:
   required: true
   content:
-    application/json:
+    multipart/form-data:
       schema:
         $ref: '..\..\..\components\schemas\contact.yaml'
 responses:
@@ -25,3 +25,5 @@ responses:
       application/json:
         schema:
           $ref: '..\..\..\components\schemas\contact.yaml'
+  '404':
+    $ref: ..\..\..\components\responses\404.yaml
